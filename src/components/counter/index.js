@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 
 const Counter = () => {
     const [count, setCount] = useState(10);
-    const [countTwo, setCountTwo] = useState(10);
 
     useEffect(() => {
         console.log('useEffect', count);
@@ -16,9 +15,9 @@ const Counter = () => {
 
     return (
         <div>
-            <h1>{countTwo}</h1>
+            <h1>{count}</h1>
             <div>
-                <button onClick={() => setCountTwo(count - 1)}>-</button>
+                <button onClick={() => setCount(count - 1)}>-</button>
                 <button onClick={increment}>+</button>
             </div>
         </div>
